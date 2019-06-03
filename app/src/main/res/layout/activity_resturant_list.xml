@@ -67,6 +67,7 @@
                     android:layout_marginRight="@dimen/marginSizeSmall"
                     android:scaleX="0.8"
                     android:scaleY="0.8"
+                    android:visibility="gone"
                     app:layout_constraintRight_toRightOf="parent"
                     android:src="@android:drawable/ic_menu_close_clear_cancel"
                     app:layout_constraintTop_toTopOf="@id/atv_search_arl"

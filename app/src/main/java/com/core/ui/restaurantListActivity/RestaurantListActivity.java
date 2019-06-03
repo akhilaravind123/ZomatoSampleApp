@@ -199,15 +199,6 @@ public class RestaurantListActivity extends AppCompatActivity implements GoogleA
         }
     }
 
-    public static boolean isPlayServicesAvailable(Context context) {
-        int resultCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context);
-        if (resultCode != ConnectionResult.SUCCESS) {
-            GoogleApiAvailability.getInstance().getErrorDialog((Activity) context, resultCode, 2).show();
-            return false;
-        }
-        return true;
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
@@ -442,6 +433,15 @@ public class RestaurantListActivity extends AppCompatActivity implements GoogleA
             view = new View(activity);
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    public static boolean isPlayServicesAvailable(Context context) {
+        int resultCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            GoogleApiAvailability.getInstance().getErrorDialog((Activity) context, resultCode, 2).show();
+            return false;
+        }
+        return true;
     }
 
     @Override
