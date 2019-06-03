@@ -1,0 +1,280 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/shimmer_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_layout="@layout/shimmer_layout_resturant_details"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_angle="0"
+        app:shimmer_demo_shimmer_color="@color/colorWhite"
+        app:spanCount="100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_demo_duration="1000"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/cl_parent_ard"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_deeplink_ard">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_ard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_resturant_image_ard"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/no_image"/>
+                
+                <TextView
+                    android:id="@+id/tv_header_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restaurant_name"
+                    android:layout_marginTop="@dimen/marginSizeNormal"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/iv_back_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"
+                    android:padding="@dimen/marginSizeSmall"
+                    android:scaleX="1.2"
+                    android:backgroundTint="@color/colorGrey"
+                    android:scaleY="1.2"
+                    android:layout_marginStart="@dimen/marginSizeNormal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_header_ard"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_header_ard"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.Toolbar>
+        
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_ard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fillViewport="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_restaurant_name_ard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restaurant_name"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_rating_ard"
+                    android:layout_marginTop="@dimen/marginSizeSmall"
+                    android:layout_marginStart="@dimen/marginSizeSmall"/>
+
+                <TextView
+                    android:id="@+id/tv_rating_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:text="4.0"
+                    android:paddingTop="@dimen/marginSizeUltraSmall"
+                    android:paddingBottom="@dimen/marginSizeUltraSmall"
+                    android:paddingLeft="@dimen/marginSizeSmall"
+                    android:paddingRight="@dimen/marginSizeSmall"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_rounded_green"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="@dimen/marginSizeSmall"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_restaurant_name_ard"
+                    app:layout_constraintTop_toTopOf="@+id/tv_restaurant_name_ard"/>
+
+                <TextView
+                    android:id="@+id/tv_location_ard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Bangalore"
+                    android:textSize="@dimen/fontSizeSmall"
+                    android:textColor="@color/colorGrey"
+                    app:layout_constraintTop_toBottomOf="@id/tv_restaurant_name_ard"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_rating_ard"
+                    android:layout_marginTop="@dimen/marginSizeExtraSmall"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"/>
+
+                <TextView
+                    android:id="@+id/tv_dishes_name_ard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ice_cream_shakes"
+                    android:textSize="@dimen/fontSizeNormal"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorGrey"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location_ard"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_rating_ard"
+                    android:layout_marginTop="@dimen/marginSizeSmall"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"/>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/marginSizeSmall"
+                    android:background="@color/greyDivider"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dishes_name_ard" />
+
+                <TextView
+                    android:id="@+id/tv_votes_text_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/votes"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@id/divider1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="@dimen/marginSizeSmall"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"/>
+
+                <TextView
+                    android:id="@+id/tv_cost_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_100"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toTopOf="@id/tv_votes_text_ard"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_votes_text_ard"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_per_person_ard"
+                    android:layout_marginRight="@dimen/marginSizeExtraSmall"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"/>
+                
+                <TextView
+                    android:id="@+id/tv_per_person_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/per_person"
+                    android:textSize="@dimen/fontSizeNormal"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toTopOf="@id/tv_votes_text_ard"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_votes_text_ard"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="@dimen/marginSizeSmall"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"/>
+
+                <TextView
+                    android:id="@+id/tv_votes_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_25"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintLeft_toRightOf="@id/tv_votes_text_ard"
+                    app:layout_constraintTop_toTopOf="@id/tv_votes_text_ard"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_votes_text_ard"
+                    android:layout_marginStart="@dimen/marginSizeSmall"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintLeft_toRightOf="@id/tv_votes_ard"
+                    app:layout_constraintTop_toTopOf="@id/tv_votes_text_ard"
+                    android:layout_marginStart="@dimen/marginSizeExtraSmall"
+                    android:src="@drawable/votes"/>
+                
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/marginSizeSmall"
+                    android:background="@color/greyDivider"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_votes_text_ard" />
+
+                <TextView
+                    android:id="@+id/tv_reviews_text_ard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reviews"
+                    android:textSize="@dimen/fontSizeLarge"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@id/divider2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="@dimen/marginSizeSmall"
+                    android:layout_marginStart="@dimen/marginSizeSmall"/>
+
+                <TextView
+                    android:id="@+id/tv_reviews_ard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/very_good"
+                    android:textSize="@dimen/fontSizeNormal"
+                    android:textStyle="bold"
+                    android:padding="@dimen/marginSizeNormal"
+                    android:textColor="@color/colorGrey"
+                    app:layout_constraintTop_toBottomOf="@id/tv_reviews_text_ard"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="@dimen/marginSizeSmall"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"/>
+                
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_deeplink_ard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        android:text="Go to Zomato"
+        android:textAllCaps="false"
+        android:paddingTop="@dimen/marginSizeExtraSmall"
+        android:paddingBottom="@dimen/marginSizeExtraSmall"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/fontSizeLarge"/>
+
+</android.support.constraint.ConstraintLayout>

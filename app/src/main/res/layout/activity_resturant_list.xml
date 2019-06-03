@@ -1,0 +1,126 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="fill_parent">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_search_arl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="@dimen/marginSizeSmall"
+            android:paddingRight="@dimen/marginSizeSmall"
+            android:paddingTop="@dimen/marginSizeNormal"
+            android:paddingBottom="@dimen/marginSizeNormal"
+            android:background="@android:color/white">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/background_rounded_grey">
+
+                <ImageView
+                    android:id="@+id/iv_search_arl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginSizeSmall"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:src="@android:drawable/ic_menu_search"
+                    app:layout_constraintTop_toTopOf="@id/atv_search_arl"
+                    app:layout_constraintBottom_toBottomOf="@id/atv_search_arl"
+                    android:layout_marginStart="@dimen/marginSizeSmall"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/atv_search_arl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Search Resturants"
+                    android:textSize="@dimen/fontSizeNormal"
+                    android:textColor="@android:color/black"
+                    android:padding="@dimen/marginSizeExtraSmall"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:layout_marginTop="@dimen/marginSizeExtraSmall"
+                    android:layout_marginBottom="@dimen/marginSizeExtraSmall"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/iv_clear_arl"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_search_arl"/>
+
+                <ImageView
+                    android:id="@+id/iv_clear_arl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/marginSizeSmall"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    app:layout_constraintTop_toTopOf="@id/atv_search_arl"
+                    app:layout_constraintBottom_toBottomOf="@id/atv_search_arl"
+                    android:layout_marginStart="@dimen/marginSizeSmall"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/v_divider_arl"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/greyDivider"
+            app:layout_constraintTop_toBottomOf="@+id/cl_search_arl"
+            app:layout_constraintLeft_toLeftOf="@+id/cl_search_arl"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_restaurants_arl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_divider_arl">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_no_restaurants_arl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_divider_arl"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:visibility="invisible"
+            android:textSize="@dimen/fontSizeLarge"
+            android:text="No Restaurants Available"/>
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/shimmer_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:shimmer_demo_child_count="10"
+            app:shimmer_demo_layout="@layout/shimmer_layout_resturant_list"
+            app:shimmer_demo_layout_manager_type="linear_vertical"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_shimmer_color="@color/colorWhite"
+            app:spanCount="100"
+            app:shimmer_demo_duration="1000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_divider_arl"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

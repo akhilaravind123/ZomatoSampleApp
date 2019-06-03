@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/marginSizeSmall"
+        android:paddingTop="@dimen/marginSizeExtraSmall"
+        android:id="@+id/cl_parent_lcl"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_resturant_lcl"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:src="@drawable/no_image"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintBottom_toBottomOf="@id/tv_dishes_lcl"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_resturant_name_lcl"/>
+
+        <TextView
+            android:id="@+id/tv_resturant_name_lcl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSizeLarge"
+            android:text="Resturant"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/marginSizeSmall"
+            android:layout_marginRight="@dimen/marginSizeSmall"
+            android:layout_marginTop="@dimen/marginSizeSmall"
+            app:layout_constraintRight_toLeftOf="@id/tv_rating_lcl"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_resturant_lcl"
+            android:layout_marginLeft="@dimen/marginSizeSmall" />
+
+        <TextView
+            android:id="@+id/tv_rating_lcl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSizeLarge"
+            android:text="4.0"
+            android:paddingTop="@dimen/marginSizeUltraSmall"
+            android:paddingBottom="@dimen/marginSizeUltraSmall"
+            android:paddingLeft="@dimen/marginSizeSmall"
+            android:paddingRight="@dimen/marginSizeSmall"
+            android:textStyle="bold"
+            android:layout_marginRight="@dimen/marginSizeSmall"
+            android:background="@drawable/background_rounded_green"
+            android:layout_marginStart="@dimen/marginSizeSmall"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="@id/tv_resturant_name_lcl"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="@dimen/marginSizeSmall" />
+
+        <TextView
+            android:id="@+id/tv_location_lcl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSizeSmall"
+            android:layout_marginStart="@dimen/marginSizeSmall"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginRight="@dimen/marginSizeSmall"
+            android:singleLine="true"
+            app:layout_constraintRight_toLeftOf="@id/tv_rating_lcl"
+            android:layout_marginTop="@dimen/marginSizeExtraSmall"
+            android:text="Whitefield, Bangalore"
+            app:layout_constraintTop_toBottomOf="@+id/tv_resturant_name_lcl"
+            app:layout_constraintLeft_toRightOf="@id/iv_resturant_lcl"
+            android:layout_marginLeft="@dimen/marginSizeSmall" />
+
+        <TextView
+            android:id="@+id/tv_dishes_lcl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSizeSmall"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/marginSizeSmall"
+            android:layout_marginBottom="@dimen/marginSizeNormal"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/marginSizeExtraSmall"
+            android:text="@string/ice_cream_shakes"
+            android:layout_marginRight="@dimen/marginSizeExtraSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location_lcl"
+            app:layout_constraintLeft_toRightOf="@id/iv_resturant_lcl"
+            app:layout_constraintRight_toLeftOf="@id/tv_cost_lcl"
+            android:layout_marginLeft="@dimen/marginSizeSmall" />
+
+        <TextView
+            android:id="@+id/tv_cost_lcl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSizeSmall"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:singleLine="true"
+            android:text="150 per person"
+            android:layout_marginRight="@dimen/marginSizeSmall"
+            app:layout_constraintBottom_toBottomOf="@id/tv_dishes_lcl"
+            app:layout_constraintTop_toTopOf="@+id/tv_dishes_lcl"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/greyDivider"
+            app:layout_constraintLeft_toLeftOf="@id/tv_dishes_lcl"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,47 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!-- FONT SIZES -->
+
+    <dimen name="fontSizeExtraSmall">10sp</dimen>
+    <dimen name="fontSizeSmall">15sp</dimen>
+    <dimen name="fontSizeMedium">17sp</dimen>
+    <dimen name="fontSizeNormal">18sp</dimen>
+    <dimen name="fontSizeLarge">22sp</dimen>
+    <dimen name="fontSizeExtraLarge">27sp</dimen>
+
+    <!-- MARGIN SIZES -->
+
+    <dimen name="marginSizeUltraSmall">3dp</dimen>
+    <dimen name="marginSizeExtraSmall">8dp</dimen>
+    <dimen name="marginSizeExtraSmallX">12dp</dimen>
+    <dimen name="marginSizeSmall">15dp</dimen>
+    <dimen name="marginSizeSmallX">18dp</dimen>
+    <dimen name="marginSizeNormal">22dp</dimen>
+    <dimen name="marginSizeNormalX">24dp</dimen>
+    <dimen name="marginSizeLarge">30dp</dimen>
+    <dimen name="marginSizeExtraLarge">35dp</dimen>
+
+    <!-- MENU DRAWER WIDTH -->
+    <dimen name="drawerWidth">230dp</dimen>
+
+    <!--Layout Margin  -->
+    <dimen name="layotMarginSmall">36dp</dimen>
+    <dimen name="layotMarginNormal">44dp</dimen>
+    <dimen name="layotMarginLarge">48dp</dimen>
+    <dimen name="layotMarginExtraLarge">62dp</dimen>
+
+    <!--Layout Margin Top -->
+    <dimen name="layotMarginTopSmall">80dp</dimen>
+    <dimen name="layotMarginTopNormal">88dp</dimen>
+    <dimen name="layotMarginTopLarge">154dp</dimen>
+    <dimen name="layotMarginTopExtraLarge">184dp</dimen>
+
+    <!-- View Pager -->
+    <dimen name="viewPagerHeight">141.3dp</dimen>
+
+
+</resources>
